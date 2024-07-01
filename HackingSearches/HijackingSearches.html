@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hijack Searches</title>
+  </head>
+  <body>
+    <main>
+      <h1>We will be sending direct Search Queries to Various Websites!</h1>
+
+      <h2>Search in Google</h2>
+      <!-- paste the search link server in action, name in input type must be same as server query name -->
+      <form action="https://www.google.com/search">
+        <input type="text" name="q" />
+        <button>Submit to Google</button>
+      </form>
+
+      <h2>Search on Twitter</h2>
+      <form action="https://twitter.com/search" method="get">
+        <input type="text" name="q" />
+        <button>Submit to Twitter</button>
+      </form>
+
+      <h2>Search on YouTube</h2>
+      <form action="https://www.youtube.com/results" method="get">
+        <input type="text" name="search_query" />
+        <button>Submit to YouTube</button>
+      </form>
+
+      <h2>Search on Reddit</h2>
+      <form action="https://www.reddit.com/search" method="get">
+        <input type="text" name="q" />
+        <button>Submit to Reddit</button>
+      </form>
+    </main>
+  </body>
+</html>
