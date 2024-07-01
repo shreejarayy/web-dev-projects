@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marathon Registration Form</title>
+    <style>
+      body {
+        background-color: bisque;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: double;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      p {
+        text-align: center;
+        font-size: small;
+        font-style: oblique;
+        font-family: Arial, Helvetica, sans-serif;
+        color: brown;
+      }
+
+      h2 {
+        color: cadetblue;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .formdiv {
+        margin: 0% 25%;
+        min-width: 175px;
+        text-align: left;
+        color: rgb(183, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      img {
+        max-width: 85%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Marathon Registration Form</h1>
+      <p>Please enter all details accurately before submitting!</p>
+      <img
+        src="https://img.freepik.com/premium-vector/city-marathon-illustration-flat-design_98292-26841.jpg"
+      />
+      <div class="formdiv">
+        <h2 style="text-align: center">Runner Details</h2>
+        <form>
+          <div>
+            <label for="name">Name of the Runner: </label>
+            <input type="text" id="name" placeholder="Enter Name" />
+          </div>
+
+          <div>
+            <label for="type">Enter Type of Marathon:</label>
+            <br />
+            <input type="radio" name="Run" id="5km" value="5km" /><label
+              for="5km"
+              >5km</label
+            >
+            <br />
+            <input type="radio" name="Run" id="10km" value="10km" /><label
+              for="10km"
+              >10km</label
+            >
+            <br />
+            <input type="radio" name="Run" id="15km" /><label for="15km"
+              >15km</label
+            >
+          </div>
+          <div>
+            <label>Enter Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Email"
+              required
+            />
+            <br />
+            <label>Enter Password</label>
+            <input type="password" required placeholder="Enter Password" />
+          </div>
+          <div>
+            <label>Enter Age Group</label>
+            <select name="Age" id="Age">
+              <option>Default</option>
+              <option value="under 18">Under 18</option>
+              <option value="18-25">18-25</option>
+              <option value="Above 25">Above 25</option>
+            </select>
+          </div>
+          <input type="submit" value="Submit Now!" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
