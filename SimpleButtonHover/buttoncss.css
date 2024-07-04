@@ -1,0 +1,34 @@
+*{
+    margin: 0%;
+    background-color: black;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button{
+    font-family: "Mulish", sans-serif;
+    padding: 5px 15px;
+    border: 1px solid orangered;
+    background-color: #0000;
+    color: orangered;
+    transition: all 0.2s ease-in;
+    font-size: medium;
+}
+
+button:hover{
+    border: 1px solid orangered;
+    background-color: #0000;
+    color: rgb(255, 68, 0);   
+    border-radius: 0.8em;
+    box-shadow: 2px 2px 20px rgba(255,68,0,0.5);
+}
+
+button:active{
+    color: rgb(255, 0, 0);
+    transition-duration: 0s;
+    background-color: rgb(255, 255, 255);
+}
