@@ -1,0 +1,85 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000000;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.title {
+    color: #EFF0D1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5vh;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top:0px;
+}
+
+.Menu{
+    font-size: 0.35em;
+    position:static;
+}
+
+.Menu a{
+    padding-left: 2vw;
+    transition: 0.3s ease;
+}
+
+.Menu a:hover{
+    color: rgb(81, 40, 245);
+    cursor: pointer;
+}
+
+hr {
+    height: 0.075em;
+    background-color: #EFF0D1;
+}
+
+.aboutme{
+    padding-top: 15vh;
+    width: 100%;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+
+.photo img{
+    height: auto;
+    width: 50vh;
+    min-height:100px;
+    min-width: 150px;
+    }
+.Description{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #EFF0D1;
+    margin: 2vh 5vw;font-size:1.25em;
+    text-align: center;
+}
+.Description p{
+    
+    font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+    width: 100%;
+    text-align: left;
+    
+    /* background-color: #f46161; */
+}
+
+#two .Skills{
+    text-align:left ;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    margin-left: 0;
+    padding-left:0;
+    left:0px;
+}

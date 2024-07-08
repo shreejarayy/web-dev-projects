@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000000;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.title {
+    color: #EFF0D1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5vh;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+}
+
+.Menu{
+    font-size: 0.35em;
+    position:static;
+}
+
+.Menu a{
+    padding-left: 2vw;
+    transition: 0.3s ease;
+}
+
+.Menu a:hover{
+    color: rgb(81, 40, 245);
+    cursor: pointer;
+}
+
+hr {
+    height: 0.075em;
+    background-color: #EFF0D1;
+}
+
+.images {
+    padding-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.image-container {
+    position: relative;
+    margin: 20px;
+    width: 25vw;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+
+.overlay {
+    transform: scale(1.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 15, 103, 0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 2vh;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
