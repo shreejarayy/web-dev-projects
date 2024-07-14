@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 4vh;
+}
+
+.nav-bar {
+    display: flex;
+    color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 0.5em;
+    list-style: none;
+    font-size: 1em;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(32, 0, 36);
+    /* transition: 0.3s; */
+}
+
+li:hover{
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 2vw;
+}
+
+.pricing-type {
+    flex: 1 1 30%;
+    max-width: 25%;
+    min-width: 250px;
+    text-align: left;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(32, 0, 36);
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    box-shadow: 10px 10px 25px 11px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 10px 10px 25px 11px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 10px 10px 25px 11px rgba(0, 0, 0, 0.51);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.pricing-type:hover {
+    transform: translateY(-10px); 
+    box-shadow: 10px 20px 35px 15px rgba(0, 0, 0, 0.51); 
+}
+.img {
+    height: 50vh;
+    width: auto;
+}
+
+.pricing-title {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: yellow;
+}
+
+img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+p {
+    flex: 1;
+}
+
+.button {
+    padding: 0.5rem;
+    width: 75px;
+    color: black;
+    text-align: center;
+    background-color: rgb(194, 194, 194);
+    border-radius: 8px;
+    margin-top: auto;
+    align-self: center;
+    transition: ease-in ;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(32, 0, 36);
+    cursor: pointer;
+    font-weight: 400;
+    width: 75px;
+}
+
+
+@media (max-width: 720px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-type {
+        text-align: center;
+        width: 20rem;
+    }
+}
