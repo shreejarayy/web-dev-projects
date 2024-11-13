@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E9E3B4;
+}
+
+.expense-tracker {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #b8b018;
+}
+
+.balance-info {
+    margin-bottom: 20px;
+}
+
+.balance {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #b8b018;
+}
+
+.transaction-type {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.transaction-type label {
+    font-size: 1.1em;
+    color: #b8b018;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #AABD8C;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.add-btn {
+    padding: 10px;
+    background-color: #381D2A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.add-btn:hover {
+    background-color: #AABD8C;
+}
+
+.transaction-list {
+    margin-top: 20px;
+    display: none;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #E9E3B4;
+}
+
+.transaction-item .description {
+    flex: 2;
+    color: #b8b018;
+}
+
+.transaction-item .amount {
+    flex: 1;
+    text-align: right;
+}
+
+.transaction-item .amount.expense {
+    color: #ff0000;
+}
+
+.transaction-item .amount.income {
+    color: #00ff59;
+}
+
+.show-all-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #381D2A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+}
+
+.show-all-btn:hover {
+    background-color: #AABD8C;
+}
