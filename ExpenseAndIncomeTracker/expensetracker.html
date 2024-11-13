@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense & Income Tracker</title>
+  <link rel="stylesheet" href="expensetracker.css">
+</head>
+<body>
+  <div class="expense-tracker">
+    <h2>Expense & Income Tracker</h2>
+    
+    <div class="balance-info">
+      <div class="balance">Balance: $<span id="balance">0.00</span></div>
+    </div>
+
+    <div class="transaction-type">
+      <label>
+        <input type="radio" name="transactionType" value="expense" checked> Expense
+      </label>
+      <label>
+        <input type="radio" name="transactionType" value="income"> Income
+      </label>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="description" placeholder="Transaction Description" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+    </div>
+
+    <!-- Add Button -->
+    <button class="add-btn" onclick="addTransaction()">Add</button>
+
+    <div class="transaction-list" id="transaction-list"></div>
+
+    <!-- Show All Button -->
+    <button class="show-all-btn" onclick="toggleTransactionHistory()">Show All</button>
+  </div>
+
+  <script src="expensetracker.js"></script>
+</body>
+</html>
