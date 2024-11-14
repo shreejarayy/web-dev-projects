@@ -12,3 +12,5 @@
 
 **Project 6: [Expense and Income Tracker](https://shreejarayy.github.io/web-dev-projects/ExpenseAndIncomeTracker/expensetracker.html)**
 
+**Project 7: [TaskMaster: To-Do List](https://shreejarayy.github.io/web-dev-projects/ToDoList/ToDoList.html)**
+
