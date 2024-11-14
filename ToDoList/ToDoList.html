@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    /* Updated styling with the provided color palette */
+    :root {
+      --dark-gray: #3F4045;
+      --dark-purple: #30292F;
+      --muted-blue: #5D737E;
+      --light: #FCFCFC;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: var(--dark-purple);
+      color: var(--light);
+      margin: 0;
+    }
+
+    .todo-app {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 8px;
+      background: var(--dark-gray);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .todo-app h2 {
+      text-align: center;
+      color: var(--light);
+    }
+
+    .form-group {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"] {
+      padding: 10px;
+      margin-right: 5px;
+      border: 1px solid var(--muted-blue);
+      border-radius: 4px;
+      background-color: var(--dark-purple);
+      color: var(--light);
+      flex: 1;
+    }
+
+    .form-group input::placeholder {
+      color: #b8b8b8;
+    }
+
+    .form-group button {
+      padding: 10px;
+      background-color: var(--muted-blue);
+      color: var(--light);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #4a5e66;
+    }
+
+    .tasks-panel {
+      display: flex;
+      gap: 20px;
+    }
+
+    .task-list {
+      flex: 1;
+      border: 1px solid var(--muted-blue);
+      border-radius: 8px;
+      padding: 10px;
+      background: var(--dark-purple);
+    }
+
+    .task-list h3 {
+      text-align: center;
+      color: var(--light);
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-bottom: 1px solid #666;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .task-item:last-child {
+      border-bottom: none;
+    }
+
+    .task-item:hover {
+      background-color: #4a4a52;
+    }
+
+    .task-item.completed {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    .task-duration {
+      font-size: 0.9em;
+      color: #b8b8b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-app">
+    <h2>To-Do List</h2>
+
+    <!-- Form to add tasks -->
+    <div class="form-group">
+      <input type="text" id="taskName" placeholder="Task Name" required>
+      <input type="number" id="taskDuration" placeholder="Duration (mins)" required>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Panels for remaining and completed tasks -->
+    <div class="tasks-panel">
+      <div class="task-list" id="remaining-tasks">
+        <h3>Remaining Tasks</h3>
+      </div>
+      <div class="task-list" id="completed-tasks">
+        <h3>Completed Tasks</h3>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Arrays to store tasks
+    const remainingTasks = [];
+    const completedTasks = [];
+
+    // Function to add a new task
+    function addTask() {
+      const taskName = document.getElementById("taskName").value;
+      const taskDuration = document.getElementById("taskDuration").value;
+
+      if (!taskName || !taskDuration || taskDuration <= 0) {
+        alert("Please enter a valid task and duration.");
+        return;
+      }
+
+      // Add the new task to remaining tasks
+      remainingTasks.push({ name: taskName, duration: taskDuration });
+      document.getElementById("taskName").value = '';
+      document.getElementById("taskDuration").value = '';
+
+      // Update task lists
+      displayTasks();
+    }
+
+    // Function to mark a task as completed
+    function completeTask(index) {
+      const task = remainingTasks.splice(index, 1)[0];
+      completedTasks.push(task);
+      displayTasks();
+    }
+
+    // Function to render both task lists
+    function displayTasks() {
+      const remainingTasksList = document.getElementById("remaining-tasks");
+      const completedTasksList = document.getElementById("completed-tasks");
+
+      // Clear the lists
+      remainingTasksList.innerHTML = '<h3>Remaining Tasks</h3>';
+      completedTasksList.innerHTML = '<h3>Completed Tasks</h3>';
+
+      // Display remaining tasks
+      remainingTasks.forEach((task, index) => {
+        const taskItem = document.createElement("div");
+        taskItem.classList.add("task-item");
+        taskItem.innerHTML = `
+          <span>${task.name}</span>
+          <span class="task-duration">${task.duration} mins</span>
+        `;
+        taskItem.onclick = () => completeTask(index); // Mark task as completed on click
+        remainingTasksList.appendChild(taskItem);
+      });
+
+      // Display completed tasks
+      completedTasks.forEach(task => {
+        const taskItem = document.createElement("div");
+        taskItem.classList.add("task-item", "completed");
+        taskItem.innerHTML = `
+          <span>${task.name}</span>
+          <span class="task-duration">${task.duration} mins</span>
+        `;
+        completedTasksList.appendChild(taskItem);
+      });
+    }
+
+    // Initial display
+    displayTasks();
+  </script>
+</body>
+</html>
